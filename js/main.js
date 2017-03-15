@@ -1,6 +1,6 @@
 
 
-function todoList(){
+function commentList(){
 //Using .getElementById, you are targeting the ID class information.
 //Using .value to return the information provided by user.
 //Next, assign a variable to the information provided. 
@@ -10,7 +10,7 @@ function todoList(){
 	// console.log(userInfo, picInfo, msgInfo);
 
 	
-	var userInput = document.createTextNode("Information: " + userInfo);
+	var userInput = document.createTextNode("Information: " + userInfo + <br>);
 	var msgInput = document.createTextNode("Message: " + msgInfo);
 
 //create a empty div tag
@@ -29,12 +29,22 @@ function todoList(){
 
 
 //You now "pointing" at empty div id="display" so items can appear.
-	document.getElementById('display').appendChild(newImg);
 	document.getElementById('display').appendChild(newDiv);
+	document.getElementById('display').appendChild(newImg);
+	console.log(display);
 
-
-	if(picInfo === ""){
-		alert("Please put URL link");
-	}
-
+//If the user did not submit URL link, then if statement will run.
+ 	if(!picInfo){
+        alert("Please put URL link");
+    } 
 }
+
+//As a second option, you can also run the code this way:
+//Note: using null or undefined did not work; had to use empty ""
+	// if(picInfo ==== ""){
+	// 	alert("Please submit URL link.")
+	// }
+
+
+
+
