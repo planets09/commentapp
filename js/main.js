@@ -10,32 +10,36 @@ function commentList(){
 	// console.log(userInfo, picInfo, msgInfo);
 
 	
-	var userInput = document.createTextNode("Information: " + userInfo + <br>);
+	var userInput = document.createTextNode("Information: " + userInfo);
 	var msgInput = document.createTextNode("Message: " + msgInfo);
 
 //create a empty div tag
 	var newDiv = document.createElement('DIV');
 //create a image tag 
-	var newImg = document.createElement('IMG'); 
-
+	var newImg = document.createElement('IMG');
+	newImg.style.width = '300px';
+	newImg.style.height = '500px'; 
 
 //You are taking the image and will then update the src value.
 	newImg.src = picInfo 
+	
 //take the user's information and attach/add to empty div.
 	newDiv.appendChild(userInput);
 	newDiv.appendChild(msgInput);
 	newDiv.appendChild(newImg);
 	// console.log(newImg, newDiv);
 
-
 //You now "pointing" at empty div id="display" so items can appear.
 	document.getElementById('display').appendChild(newDiv);
 	document.getElementById('display').appendChild(newImg);
 	console.log(display);
 
+
+	newDiv.classList.add('space');
+
 //If the user did not submit URL link, then if statement will run.
  	if(!picInfo){
-        alert("Please put URL link");
+        alert("Please submit a URL link.");
     } 
 }
 
