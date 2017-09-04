@@ -43,11 +43,7 @@ function commentList(){
     } 
 }
 
-//As a second option, you can also run the code this way:
-//Note: using null or undefined did not work; had to use empty ""
-	// if(picInfo ==== ""){
-	// 	alert("Please submit URL link.")
-	// }
+
 
 
 
